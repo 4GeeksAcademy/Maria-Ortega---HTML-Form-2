@@ -2,85 +2,114 @@
 <html>
 <head>
    <link rel="stylesheet" href="styles.css" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-   <form>
-       <table>
-        <div>
-           <h3>Payment form example</h3>
+   <form class="row d-flex justify-content-center">
+       <div class="col-10">
+        <div class="card">
+           <h3 class= "card-header">Payment form example</h3>
+           <div class="card-body">
            <div>
-               <fieldset>
-               <p> Some fields are missing</p>
-               </fieldset>
+               <p class="alert alert-danger" role="alert">Some fields are missing</p>
            </div>
-           <div>
-           <fieldset>
-            <div>
-                <label for="text">Card#</label>
+           <div class="row">
+            <div class="col-sm-4 mb-3">
+                <div class="mb-3">
+                    <label for="card" class="form-label"> Card#</label>
+                    <input type="text" class="form-control" id="card" placeholder="xxxxxxx">
+                  </div>
             </div>
-            <div>
-                <input type="text" name="card#" value="xxxxxxxxxxxx"/>
+            <div class="col-sm-4">
+                <div class="mb-3">
+                    <label for="cvc" class="form-label">CVC#</label>
+                    <input type="text" class="form-control" id="cvc" placeholder="00000">
+                  </div>
             </div>
-            <div>
-                <label for="cvc#">CVC# </label>
-            </div>
-            <div>
-                   <input type="text" name="cvc#" value="0000" />
-            </div>
-            <div>
-                <label for="amount">Amount</label>
-            </div>
-            <div>
-                <input type="amount" name="amount" value="Amount" />
-            </div>
-                
+            <div class="col-sm-4">
+                <div class="mb-3">
+                    <label for="amount" class="form-label"> Amount $</label>
+                    <input type="text" class="form-control" id="amount" placeholder="Amount">
+                  </div>
+            </div>  
         </div>
-           </fieldset>
-           <div>
-           <fieldset>
-            <div>
-                <label for="firstname">First Name:</label>
+           <div class="row">
+            <div class="col-sm-6">
+                <div class="mb-3">
+                    <label for="firstname" class="form-label"> First Name</label>
+                    <input type="text" class="form-control" id="firstname" name="first name">
+                  </div>
             </div>
-            <div>
-                <input type="Text" name="firstname" />
+            <div class="col-sm-6">
+                <div class="mb-3">
+                    <label for="lastname" class="form-label"> Last Name</label>
+                    <input type="text" class="form-control" id="lastname" name="last name">
             </div>
-            <div>
-                <label for="city">City:</label>
             </div>
-            <div>
-                <input type="Text" name="city" />
             </div>
-            <div>
-                <label for="we accept">We accept:</label>
+            <div class="row">
+            <div class="col-sm-6">
+                    <label for="city" class="form-label"> City</label>
+                    <input type="text" class="form-control" name="City">
+                </div>
+            <div class="col-sm-3">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" aria-label="Default select example">
+                <option selected>Pick a state</option>
+                   <option value="florida">Florida</option>
+                   <option value="arizona">Arizona</option>
+                   <option value="newyork">New York</option>
+              </select>
             </div>
-            <div>
-                <input type="Text" name="city" />
+            <div class="col-sm-3 mb-3">
+                    <label for="postalcode" class="form-label">Postal code</label>
+                    <input type="text" class="form-control" name="postalcode">
+                </div>
+            </div>            
+            <div class="row">
+                <div class="col-sm-6">
+                    <p for="we accept">We accept:</p>
+                    <div class="text-bg-secondary rounded d-flex w-50 p-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            <i class="fa-brands fa-cc-visa fa-xl me-4"></i></label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            <i class="fa-brands fa-cc-mastercard fa-xl me-4"></i></i></label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            <i class="fa-brands fa-cc-amex fa-xl me-4"></i></i></label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            <i class="fa-brands fa-cc-diners-club fa-xl me-4"></i></i></label>
+                      </div>
+                        </div>
+                </div>
+            <div class="col-sm-6">
+               <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <p> Add any notes here.</p>
+              </div>
             </div>
-           </fieldset>
-           </div>
-           <div>
-           <fieldset>
-               <label for="lastname">Last Name:</label>
-               <input type="text" name="last name" />
-           <label for="lastname">State</label>
-               <select name="state" id="state">
-                   <option value="green">Florida</option>
-                   <option value="blue">Arizona</option>
-                   <option value="brown">New York</option>
-           </fieldset>
-               </select>
-               <label for="postalcode">Postal Code:</label>
-               <input type="Text" name="city" /
-           </div>
-           </fieldset>
-           <fieldset>
-               <label for="message">Message</label>
-               <input type="Ttextarea" name="message" id="message"></textarea>
-               <p> Add any notes here.</p>
-                <button type="submit"> Cancel</button>
-               <button type="submit"> Send </button>
-           </fieldset>
-       </table>
+            </div>
+               <div class="card-footer text-end">
+                <button class="btn btn-secondary" type="cancel"> Cancel</button>
+               <button class="btn btn-primary" type="submit"> Send </button>
+            </div>
+        </div>
+        </div>  
+        </div>
+       </div>
    </form>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
